@@ -1,6 +1,9 @@
+import { useState, useEffect } from "react";
 import "./Reset.css";
 import "./App.css";
-
+import Online from "./Online.jsx";
+import Hiring from "./Hiring.jsx";
+import { Route, NavLink, Switch } from "react-router-dom";
 
 function App() {
   return (
@@ -8,17 +11,17 @@ function App() {
       <header>
         <div className="header-top">
           <div className="heading-text">
-          <div>
+            <div>
               <p>
-              <span>T</span>he
-            </p>
-            <p>
-              <span>E</span>ntrepreneurship
-            </p>
-            <p>
-              <span>N</span>etwork
-            </p>
-           </div>
+                <span>T</span>he
+              </p>
+              <p>
+                <span>E</span>ntrepreneurship
+              </p>
+              <p>
+                <span>N</span>etwork
+              </p>
+            </div>
           </div>
           <div className="searchDiv">
             <div className="cartAndLogDiv">
@@ -69,26 +72,104 @@ function App() {
           <div className="image-div"></div>
           <nav className="header-nav">
             <ul>
-              <li>Home</li>
-              <li>Online Courses</li>
-              <li>We're Hiring</li>
+              <li>
+                <NavLink
+                  to="/"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/online"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Online Courses
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/hiring"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  We're Hiring
+                </NavLink>
+              </li>
               <li>More</li>
             </ul>
           </nav>
         </div>
       </header>
-      <main>
-        <div className="banner1"></div>
-        <div className="banner2"></div>
-        <div className="banner3"></div>
-        <div className="banner4"></div>
-        <div className="banner5"></div>
-        <div className="banner6"></div>
-        <div className="banner7"></div>
-      </main>
-      <footer></footer>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/online" component={Online} />
+        <Route exact path="/hiring" component={Hiring} />
+      </Switch>
+      <footer>This is the Footer</footer>
     </div>
   );
 }
+
+const Home = () => {
+
+  const [offsetY, setOffsetY] = useState(0);
+  const handleScroll = () => setOffsetY(window.pageYOffset);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
+  return (
+    <main className="home-main">
+      <div className="banner1">
+        <img
+          src="https://static.wixstatic.com/media/44a6c2_b456634292f844e7b822bb94dcd431fd~mv2.jpg"
+          alt="banner one pic"
+        />
+        <div className="banner1-image-text">
+          A World of Knowledge at <span>Your Fingertips</span>
+        </div>
+      </div>
+      <div className="banner2">
+        <header>About Us</header>
+        <section className="sec1">
+          <p>
+            Learning Together <br />
+            From the Comfort <br /> of Your Home
+          </p>
+          <button>Learn More</button>
+        </section>
+        <section className="sec2">
+          <img
+            src="https://static.wixstatic.com/media/749045033f5b4f539376b91db3710416.jpg/v1/fill/w_441,h_296,al_c,q_80,usm_0.66_1.00_0.01/Teen%20study%20group.webp"
+            alt="learn together"
+          />
+        </section>
+      </div>
+      <div className="banner3">
+        <div className="banner3-background" style={{transform: `translateY(${(offsetY-1200) * 0.5}px)`}}></div>
+        <div className="banner-wrap">
+          <header>Welcome to</header>
+          <h2>THE NEXT BIG THING</h2>
+          <div className="horiz-rule-white"></div>
+          <div className="joinBtn">Join TEN Virtual Campus</div>
+        </div>
+      </div>
+      <div className="banner4"></div>
+      <div className="banner5"></div>
+      <div className="banner6"></div>
+      <div className="banner7"></div>
+    </main>
+  );
+};
 
 export default App;
