@@ -164,7 +164,32 @@ const Home = () => {
           <div className="joinBtn">Join TEN Virtual Campus</div>
         </div>
       </div>
-      <div className="banner4"></div>
+      <div className="banner4">
+        <div className="pic1">
+          <p>Our Courses</p>
+          <span>Your New</span> <br/>
+          <span>Journey Begins Here,</span> <br/>
+          <span>Today</span>
+        </div>
+        <div className="pic2">
+          <span>Entrepreneurship</span> 
+          <span>made fun</span>
+          <button className="explore-btn">Explore Here</button>
+        </div>
+        <div className="pic3"></div>
+        <div className="pic4">
+          <span>Digital</span> 
+          <span>Marketing</span>
+          <button className="explore-btn">Explore Here</button>
+        </div>
+        <div className="pic5"></div>
+        <div className="pic6">
+          <span>Product Management</span> 
+          <span>like a pro</span>
+          <button className="explore-btn">Explore Here</button>
+        </div>
+        <div className="pic7"></div>
+      </div>
       <div className="banner5"></div>
       <div className="banner6"></div>
       <div className="banner7"></div>
