@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 
@@ -382,7 +382,6 @@ main .banner3-background {
   cursor: pointer;
 }
 
-
 .pic1 {
   grid-column: 1 / 3;
   grid-row: 1;
@@ -523,6 +522,199 @@ main .banner3-background {
   background-image: url("https://static.wixstatic.com/media/a3ac449c86364dd8999922949876d09e.jpg/v1/fill/w_713,h_444,al_c,q_80,usm_0.66_1.00_0.01/a3ac449c86364dd8999922949876d09e.webp");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.banner5 {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.banner5 .outer-ribbon {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+}
+
+.banner5 .ribbon {
+  position: relative;
+  background-color: black;
+  color: white;
+  height: 80px;
+  width: 1200px;
+  display: flex;
+}
+
+.band {
+  flex-grow: 7;
+}
+
+.right-cut , .left-cut{
+  border-top: 40px solid transparent;
+  border-right: 20px solid white;
+  border-bottom: 40px solid transparent;  
+}
+
+.left-cut {
+  border-left: 20px solid white;
+  border-right: none;
+}
+
+.ribbon span {
+  position: absolute;
+  top: 15px;
+  left: 400px;
+  font-size: 46px;
+  font-family: "Questrial", sans-serif;
+}
+
+.expert-div, .community-div, .curriculum-div {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.banner5 svg {
+  width: 170px;
+}
+
+.banner5 .heading-span {
+  font-size: 26px;
+  font-family: "Noticia Text", serif;
+}
+
+.horiz-rule-black {
+  background-color: black;
+  width: 200px;
+  height: 4px;
+  margin-top: 3px;
+}
+
+.banner5 .banner5-para {
+  margin-top: 20px;
+  width: 270px;
+  font-size: 16px;
+  font-family: 'Questrial', sans-serif;
+  line-height: 28px;
+}
+
+.curriculum-div .banner5-para {
+  width: 350px;
+}
+
+.banner6 {
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner6 > span {
+  font-size: 51px;
+  font-family: 'Qestrial', sans-serif;
+  color: #E21C21;
+}
+
+.banner6 .slider-div {
+  margin-top: 10px;
+  position: relative;
+  background-image: url("https://static.wixstatic.com/media/11062b_558f00357585424e894fb7c595fc38fd~mv2.jpg/v1/fill/w_1216,h_496,al_c,q_85,usm_0.66_1.00_0.01/11062b_558f00357585424e894fb7c595fc38fd~mv2.webp");
+  background-size: cover;
+  height: 500px;
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+}
+
+.slider-div > div:not(:nth-of-type(1), :nth-of-type(2)) {
+  width: 900px;
+  display: none;
+  color: white;
+  font-size: 30px;
+  font-family: 'Notiticia Text', serif;
+} 
+
+.slider-div > div > cite {
+  font-style: normal;
+}
+
+.slider-div div p {
+  margin-bottom: 40px;
+}
+
+.slider-div div:nth-of-type(3) {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+} 
+
+.slider-div div:nth-of-type(4) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.slider-div div:nth-of-type(5) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.slider-div div:nth-of-type(6) {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.slider-div div:nth-of-type(6) p {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.slider-div div:nth-of-type(6) cite {
+  margin-top: 70px;
+}
+
+.slider-div div:nth-of-type(1) {
+  position: absolute;
+  top: 45%;
+  left: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+.slider-div > div:nth-of-type(2) {
+  position: absolute;
+  top: 45%;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+}
+
+
+ .slider-div svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+} 
+
+.slider-div .right-arrow {
+  transform: rotate(180deg);
+}
+
+.banner6 .slider-div .hidden {  /* ** Hide any element with this class */
+  display: none;
 }
 
 footer {
