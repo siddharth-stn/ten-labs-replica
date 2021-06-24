@@ -128,14 +128,14 @@ const Home = () => {
   }, []);
   //////////////////////////////**X**////////////////////////////////////////
 
-  // *** Image Slider Engine --------------------------->
+  // *** Image Slider Engine (with buttons/arrows)--------------------------->
   const [currentSlide, setCurrentSlide] = useState(1);
   const [slideOne, setSlideOne] = useState("");
   const [slideTwo, setSlideTwo] = useState("hidden");
   const [slideThree, setSlideThree] = useState("hidden");
   const [slideFour, setSlideFour] = useState("hidden");
 
-  const nextSlide = () => {
+  const nextSlide = () => {     //** Works with Forward Arrow Click */
     switch (currentSlide) {
       case 1:
         setSlideOne("hidden");
@@ -160,7 +160,7 @@ const Home = () => {
     }
   };
 
-  const prevSlide = () => {
+  const prevSlide = () => {    //** Works with back arrow Click*/
     switch (currentSlide) {
       case 4:
         setSlideFour("hidden");
@@ -184,7 +184,15 @@ const Home = () => {
         break;
     }
   }
+//////////////////////////////**X**////////////////////////////////////////
 
+// *** Image Slider Engine (with time) -------------------------->
+useEffect(() => {
+let intervalId = setInterval(nextSlide, 3000);
+
+return () => clearInterval(intervalId);
+}); 
+////////////////////////*X**///////////////////////////////////////////////
 
 
   return (
