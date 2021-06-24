@@ -112,7 +112,42 @@ function App() {
         <Route exact path="/online" component={Online} />
         <Route exact path="/hiring" component={Hiring} />
       </Switch>
-      <footer>This is the Footer</footer>
+      <footer>
+        <div className="mainFooterWrap">
+          <p>Subscribe to our newsletter</p>
+          <div className="contactDiv">
+            <div className="socialIcons">
+              <img src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp" alt="facebook Link" /> {/* Facebook */}
+              <img src="https://static.wixstatic.com/media/59687ffffc2042f885062ce2b0744381.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/59687ffffc2042f885062ce2b0744381.webp" alt="twitter Link" /> {/* Twitter */}
+              <img src="https://static.wixstatic.com/media/9f9c321c774844b793180620472aa4f1.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/9f9c321c774844b793180620472aa4f1.webp" alt="Instagram Link" /> {/* Instagram */}
+            </div>
+            <div className="form">
+              <div className="top">
+                <input type="text" />
+                <input type="text" />
+              </div>
+              <div className="bottom">
+                <input type="text" />
+                <input type="text" />
+              </div>
+            </div>
+            <div className="aboutDiv">
+              <span>About Us</span> <br />
+              <span>FAQ's</span> <br />
+              <span>Contact Us</span>
+            </div>
+          </div>
+          <div className="buttonDiv">
+            {/* Tick Icon */} <span>Join TEN's Discord Community</span> <br />
+            <button>Submit</button>
+          </div>
+        </div>
+        <div className="footerExtensionDiv">
+          <span>
+            &copy; 2020 Limitless Technologies - The Entrepreneurship Network
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }
