@@ -135,32 +135,34 @@ const Home = () => {
   const [slideThree, setSlideThree] = useState("hidden");
   const [slideFour, setSlideFour] = useState("hidden");
 
-  const nextSlide = () => {     //** Works with Forward Arrow Click */
+  const nextSlide = () => {
+    //** Works with Forward Arrow Click */
     switch (currentSlide) {
       case 1:
         setSlideOne("hidden");
         setSlideTwo("show");
         setCurrentSlide(2);
         break;
-        case 2:
-          setSlideTwo("hidden");
-          setSlideThree("show");
-          setCurrentSlide(3);
-          break;
-        case 3:
-          setSlideThree("hidden");
-          setSlideFour("show");
-          setCurrentSlide(4);
-          break;
-        case 4:
-          setSlideFour("hidden");
-          setSlideOne("show");
-          setCurrentSlide(1);
-          break;
+      case 2:
+        setSlideTwo("hidden");
+        setSlideThree("show");
+        setCurrentSlide(3);
+        break;
+      case 3:
+        setSlideThree("hidden");
+        setSlideFour("show");
+        setCurrentSlide(4);
+        break;
+      case 4:
+        setSlideFour("hidden");
+        setSlideOne("show");
+        setCurrentSlide(1);
+        break;
     }
   };
 
-  const prevSlide = () => {    //** Works with back arrow Click*/
+  const prevSlide = () => {
+    //** Works with back arrow Click*/
     switch (currentSlide) {
       case 4:
         setSlideFour("hidden");
@@ -183,17 +185,16 @@ const Home = () => {
         setCurrentSlide(4);
         break;
     }
-  }
-//////////////////////////////**X**////////////////////////////////////////
+  };
+  //////////////////////////////**X**////////////////////////////////////////
 
-// *** Image Slider Engine (with time) -------------------------->
-useEffect(() => {
-let intervalId = setInterval(nextSlide, 3000);
+  // *** Image Slider Engine (with time) -------------------------->
+  useEffect(() => {
+    let intervalId = setInterval(nextSlide, 3000);
 
-return () => clearInterval(intervalId);
-}); 
-////////////////////////*X**///////////////////////////////////////////////
-
+    return () => clearInterval(intervalId);
+  });
+  ////////////////////////*X**///////////////////////////////////////////////
 
   return (
     <main className="home-main">
@@ -374,12 +375,16 @@ return () => clearInterval(intervalId);
         <span>Testimonials</span>
         <div className="horiz-rule-black"></div>
         <div className="slider-div">
-          <div onClick={prevSlide} className=".leftArrowDiv"><svg className="left-arrow" viewBox="0 0 21 41">
-            <path d="M20.3 40.8L0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
-          </svg></div>
-          <div onClick={nextSlide} className=".rightArrowDiv"><svg className="right-arrow" viewBox="0 0 21 41">
-            <path d="M20.3 40.8L0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
-          </svg></div>
+          <div onClick={prevSlide} className=".leftArrowDiv">
+            <svg className="left-arrow" viewBox="0 0 21 41">
+              <path d="M20.3 40.8L0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
+            </svg>
+          </div>
+          <div onClick={nextSlide} className=".rightArrowDiv">
+            <svg className="right-arrow" viewBox="0 0 21 41">
+              <path d="M20.3 40.8L0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path>
+            </svg>
+          </div>
           <div className={slideOne}>
             <p>
               Working with TEN is a great opportunity for the students who want
@@ -420,7 +425,20 @@ return () => clearInterval(intervalId);
           </div>
         </div>
       </div>
-      <div className="banner7"></div>
+      <div className="banner7">
+        <video autoplay="true" muted="true">
+          <source src="https://video.wixstatic.com/video/11062b_79271b7012564ed497d2774a895ab7fd/1080p/mp4/file.mp4" />
+          Your Browser Does Not Support Video File.
+        </video>
+        <div>
+          <div>
+            <span>Power of</span>&nbsp;
+            <span>TEN</span>&nbsp;
+            <span>Consulting</span>
+          </div>
+          <button>Explore Here &gt;</button>
+        </div>
+      </div>
     </main>
   );
 };
