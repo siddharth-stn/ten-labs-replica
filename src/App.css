@@ -12,6 +12,29 @@ body {
 }
 
 
+.container {
+  position: relative;
+}
+
+.container .messageBoxDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 22px;
+  z-index: 999;
+  width: 65px;
+  height: 65px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.messageBoxDiv svg {
+  color: white;
+}
+
+
 .container > header {
   display: flex;
   flex-direction: column;
@@ -314,9 +337,10 @@ main .banner3 {
 
 main .banner3-background {
   position: absolute;
-  width: 100%;
+  min-width: 100%;
   background-image: url("https://static.wixstatic.com/media/dcca985fe5e148b1aea6744afd6af686.jpg/v1/fill/w_1429,h_558,al_c,q_85,usm_0.66_1.00_0.01/dcca985fe5e148b1aea6744afd6af686.webp");
   background-repeat: no-repeat;
+  background-size: cover;
   top: -80px;
   bottom: -150px;
   z-index: -999;
@@ -606,7 +630,7 @@ main .banner3-background {
 
 .banner6 {
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 80px;
   width: 85%;
   display: flex;
   flex-direction: column;
@@ -779,6 +803,15 @@ footer {
   height: 300px;
   border-top: 2px solid rgb(198,198,198);
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  min-width: 850px;
+}
+
+.mainFooterWrap {
+  min-width: 850px;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -791,5 +824,137 @@ footer > .mainFooterWrap p {
 }
 
 .mainFooterWrap .contactDiv {
+  margin-top: 5px;
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 850px;
+}
+
+.contactDiv .socialIcons {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.contactDiv .form input {
+  outline: none;
+  border: 2px solid rgb(145,145,145);
+  height: 50px;
+  width: 190px;
+}
+
+.form .top input:first-of-type {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.form .bottom input:first-of-type {
+  margin-right: 10px;
+}
+
+.grayPlaceHolder::placeholder { 
+  color: rgb(145,145,145);
+  opacity: 1;
+}
+
+.form input:hover {
+  border: 2px solid black;
+}
+
+.form input:focus {
+  background-color: #fff;
+}
+
+.contactDiv .form .invalid-class { /* To make the empty input border red after focusOut (onBlur) */
+  border:  1px solid red;
+}
+
+.mainFooterWrap .buttonDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainFooterWrap .buttonDiv label {
+  font-size: 16px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.contactDiv .aboutDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Questrial', sans-serif;
+  font-size: 23px;
+  text-shadow: rgb(0 0 0 / 40%) 0px 4px 5px;
+}
+
+.buttonDiv div {
+  position: relative;
+}
+
+#joinBox {
+  display: none;
+}
+
+label::before {
+  content: "";
+  position: absolute;
+  background: url("./images/icons8-tick-box.svg");
+  background-position: center;
+  background-size: center;
+  width: 15px;
+  height: 15px;
+  top: 13px;
+  left: -25px;
+
+  transform: scale(0);
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  border: 2px solid aquamarine;
+  width: 17px;
+  height: 17px;
+  top: 10px;
+  left: -28px;
+  background-color: aquamarine;
+}
+
+#joinBox:checked + label::before {
+  transform: scale(1);
+}
+
+#joinBox:checked + label::after {
+  background-color: transparent;
+}
+
+.buttonDiv button {
+  margin-top: 10px;
+  width: 120px;
+  height: 25px;
+  border: 2px solid black;
+  font-size: 1.1rem;
+}
+
+.buttonDiv button:hover {
+  background-color: red;
+  border: none;
+
+}
+
+.footerExtensionDiv {
+  background-color: rgb(255,89,55);
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-size: 22px;
+  padding: 7px 0;
+  padding-top: 10px;
+  font-family: 'Questrial', sans-serif;
 }

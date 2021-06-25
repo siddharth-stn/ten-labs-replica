@@ -6,8 +6,31 @@ import Hiring from "./Hiring.jsx";
 import { Route, NavLink, Switch } from "react-router-dom";
 
 function App() {
+  const handleBlur = (e) => {
+    if (e.target.value === "") {
+      console.log("I was empty");
+      e.target.classList.add("invalid-class");
+    } else {
+      e.target.classList.add("valid-class");
+    }
+  };
+
   return (
     <div className="container">
+      <div className="messageBoxDiv">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+        >
+          <path
+            d="M16 2C8.28 2 2 7.8 2 14.93a12.144 12.144 0 001.696 6.15l-1.668 7.51A1.16 1.16 0 003.63 29.9l6.914-3.072A14.835 14.835 0 0016 27.861c7.72 0 14-5.8 14-12.93S23.72 2 16 2zm4.508 16.32h-9.016a1.16 1.16 0 010-2.32h9.016a1.16 1.16 0 010 2.32zm0-4.638h-9.016a1.16 1.16 0 010-2.318h9.016a1.16 1.16 0 110 2.318z"
+            fill="currentColor"
+            fill-rule="nonzero"
+          ></path>
+        </svg>
+      </div>
       <header>
         <div className="header-top">
           <div className="heading-text">
@@ -117,18 +140,47 @@ function App() {
           <p>Subscribe to our newsletter</p>
           <div className="contactDiv">
             <div className="socialIcons">
-              <img src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp" alt="facebook Link" /> {/* Facebook */}
-              <img src="https://static.wixstatic.com/media/59687ffffc2042f885062ce2b0744381.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/59687ffffc2042f885062ce2b0744381.webp" alt="twitter Link" /> {/* Twitter */}
-              <img src="https://static.wixstatic.com/media/9f9c321c774844b793180620472aa4f1.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/9f9c321c774844b793180620472aa4f1.webp" alt="Instagram Link" /> {/* Instagram */}
+              <img
+                src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/e316f544f9094143b9eac01f1f19e697.webp"
+                alt="facebook Link"
+              />
+              <img
+                src="https://static.wixstatic.com/media/59687ffffc2042f885062ce2b0744381.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/59687ffffc2042f885062ce2b0744381.webp"
+                alt="twitter Link"
+              />
+              <img
+                src="https://static.wixstatic.com/media/9f9c321c774844b793180620472aa4f1.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01/9f9c321c774844b793180620472aa4f1.webp"
+                alt="Instagram Link"
+              />
             </div>
             <div className="form">
               <div className="top">
-                <input type="text" />
-                <input type="text" />
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className="grayPlaceHolder"
+                  onBlur={handleBlur}
+                />
+                <input
+                  type="text"
+                  placeholder="College Name"
+                  className="grayPlaceHolder"
+                  onBlur={handleBlur}
+                />
               </div>
               <div className="bottom">
-                <input type="text" />
-                <input type="text" />
+                <input
+                  type="text"
+                  placeholder="Mobile No."
+                  className="grayPlaceHolder"
+                  onBlur={handleBlur}
+                />
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="grayPlaceHolder"
+                  onBlur={handleBlur}
+                />
               </div>
             </div>
             <div className="aboutDiv">
@@ -138,7 +190,10 @@ function App() {
             </div>
           </div>
           <div className="buttonDiv">
-            {/* Tick Icon */} <span>Join TEN's Discord Community</span> <br />
+            <div>
+              <input type="checkbox" id="joinBox" />
+              <label for="joinBox">Join TEN's Discord Community</label>
+            </div>
             <button>Submit</button>
           </div>
         </div>
@@ -261,7 +316,7 @@ const Home = () => {
       <div className="banner3">
         <div
           className="banner3-background"
-          style={{ transform: `translateY(${(offsetY - 1200) * 0.5}px)` }}
+          style={{ transform: `translateY(${(offsetY - 1200) * 0.7}px)` }}
         ></div>
         <div className="banner-wrap">
           <header>Welcome to</header>
@@ -461,7 +516,7 @@ const Home = () => {
         </div>
       </div>
       <div className="banner7">
-        <video autoplay="true" muted="true">
+        <video autoplay={"true"} muted={"true"} loop={"true"}>
           <source src="https://video.wixstatic.com/video/11062b_79271b7012564ed497d2774a895ab7fd/1080p/mp4/file.mp4" />
           Your Browser Does Not Support Video File.
         </video>
