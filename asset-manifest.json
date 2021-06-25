@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ten-labs-replica/static/css/main.b41dd6af.chunk.css",
+    "main.js": "/ten-labs-replica/static/js/main.ff3667ee.chunk.js",
+    "main.js.map": "/ten-labs-replica/static/js/main.ff3667ee.chunk.js.map",
+    "runtime-main.js": "/ten-labs-replica/static/js/runtime-main.1e281ae6.js",
+    "runtime-main.js.map": "/ten-labs-replica/static/js/runtime-main.1e281ae6.js.map",
+    "static/js/2.efb2560d.chunk.js": "/ten-labs-replica/static/js/2.efb2560d.chunk.js",
+    "static/js/2.efb2560d.chunk.js.map": "/ten-labs-replica/static/js/2.efb2560d.chunk.js.map",
+    "index.html": "/ten-labs-replica/index.html",
+    "static/css/main.b41dd6af.chunk.css.map": "/ten-labs-replica/static/css/main.b41dd6af.chunk.css.map",
+    "static/js/2.efb2560d.chunk.js.LICENSE.txt": "/ten-labs-replica/static/js/2.efb2560d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/ten-labs-replica/static/media/icons8-tick-box.e131946b.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e281ae6.js",
+    "static/js/2.efb2560d.chunk.js",
+    "static/css/main.b41dd6af.chunk.css",
+    "static/js/main.ff3667ee.chunk.js"
+  ]
+}
