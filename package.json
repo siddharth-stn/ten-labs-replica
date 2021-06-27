@@ -1,6 +1,6 @@
 {
   "name": "ten-labs-replica",
-  "homepage": "https://siddharth-stn.github.io/ten-labs-replica/",
+  "homepage": "https://siddharth-stn.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,7 +15,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=3000 react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",

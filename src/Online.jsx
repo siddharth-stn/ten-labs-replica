@@ -1,6 +1,10 @@
+import "./Online.css";
 
 const Online = () => {
-    return <main>This is Online</main>;
-}
+  return (
+  <main>
+      
+  </main>
+  );};
 
 export default Online;
