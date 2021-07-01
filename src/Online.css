@@ -1,3 +1,148 @@
-main {
-    border: 2px solid red;
+.onlineWrapper {  
+    width: 100%;
+    top:213px;
+    display: flex;
+}
+
+.asideFilter {
+    background-color: rgb(82,82,82);
+    width: 350px;
+    color: white;
+    font-family: 'Questrial', sans-serif;
+}
+
+.asideFilter h2 {
+    font-size: 26px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.priceSliderDiv span {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.mainOnlineDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.dropdown {
+    align-self: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.dropdown select {
+    background-color: rgb(82,82,82);
+    color: white;
+    cursor: pointer;
+    width: 170px;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+hr {
+    width: 200px;
+    height: 1px;
+    border: none;
+    background-color: rgb(117,117,117);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sliderDiv {
+    margin-left: 27px;
+    margin-right: 20px;
+    margin-top: 15px;
+}
+
+.content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    grid-gap: 40px;
+}
+
+.content > div {
+    border: 1px solid rgb(232, 227, 227);
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+.showOnHover {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 110px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.showOnHover > a {
+    text-decoration: none;
+    color: black;
+}
+
+.content > div .imgDiv {
+    margin-top: 20px;
+}
+
+.content .hook {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.75);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 15px;
+    right: 15px;
+}
+
+.hook svg {
+    width: 100%;
+}
+
+.content > div > h3 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    padding: 0 10px;
+    margin-top: 50px;
+}
+
+
+.content > div span {
+    align-self: flex-start;
+    margin-top: 20px;
+    color: #4BD1A0;
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+}
+
+
+
+.mainOnlineDiv button {
+    border: 1px solid rgb(253,198,10);
+    color: rgb(253,198,10);
+    width: 270px;
+    height: 45px;
+    padding: 10px 20px;
+    margin: 25px 0;
+    font-size: 16px;
+    font-family: 'Questrial', sans-serif;
+    background-color: white;;
 }

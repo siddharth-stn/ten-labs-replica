@@ -1,0 +1,122 @@
+
+
+@font-face {
+  font-family: 'futura_ltbook';
+  src: url("./futuralt-book-webfont.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hiringWrapperDiv {
+    padding: 0 100px;
+}
+
+.hiringMain {
+  background:  url("https://static.wixstatic.com/media/11062b_557462ab123440368447ab18a66043e5~mv2.jpg/v1/fill/w_1365,h_745,al_c,q_85,usm_0.66_1.00_0.01/11062b_557462ab123440368447ab18a66043e5~mv2.webp"), rgb(94,97,98);
+  background-blend-mode: multiply;
+  padding-left: 350px;
+  padding-right: 100px;
+  padding-top: 30px;
+  background-size: cover;
+  color: white;
+}
+
+.hiringMain > h3 {
+  font-size: 24px;
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
+}
+
+.hiringMain > p {
+  font-size: 18px;
+  font-family: 'Questrial', sans-serif;
+  margin-top: 20px;
+}
+
+.hiringMain > img {
+  float: right;
+  margin-bottom: 40px;
+}
+
+.hiringMain::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hiringMain > span {
+  display: block;
+  margin-top: 20px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 18px;
+}
+
+.formDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align:center;
+}
+
+.formDiv .bgImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+.formDiv > h3 {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-family: 'futura_ltbook', sans-serif;
+  color: #373B4D;
+}
+
+.formDiv span {
+  font-family: "Noticia-Text", sans-serif;
+  font-size: 14px;
+  color: #808080;
+  margin-bottom: 40px;
+}
+
+.formDiv form {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  margin: 0 auto;
+}
+
+form > label {
+  align-self: flex-start;
+  margin-bottom: 10px;
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+}
+
+form > input {
+  border: 1px solid black;
+  outline: none;
+}
+
+form > select, form > input {
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
+  margin-bottom: 20px;
+  height: 50px;
+  font-size: 15px;
+  font-family: 'Questrial', sans-serif;
+}
+
+form > button {
+  background-color: rgba(232, 227, 227, 0.77);
+  font-family: 'Questrial', sans-serif;
+  font-size: 17px;
+  font-style: italic;
+  width: 114px;
+  height: 35px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 4px 0px;
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
