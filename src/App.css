@@ -223,6 +223,38 @@ input:focus {
   color: red;
 }
 
+.header-bottom .extraNavs {
+  position: absolute;
+  background-color: #fff;
+  top: 65px;
+  left: 846px;
+  font-size: 1.6rem;
+  font-family: "Questrial", sans-serif;
+  text-align: center;
+  z-index: 99;
+}
+
+.extraNavs ul li {
+  padding: 7px;
+  border-bottom: 1px solid violet;
+}
+
+.extraNavs ul li:first-child {
+  padding-top: 20px;
+}
+
+.extraNavs ul li:last-child {
+  border-bottom: none;
+}
+
+.extraNavs ul li:hover {
+  color: red;
+}
+
+.noShow {
+  display: none;
+}
+
 main {
   width: 90%;
   min-width: 1000px;

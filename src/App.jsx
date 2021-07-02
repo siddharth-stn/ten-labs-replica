@@ -15,6 +15,16 @@ function App() {
     }
   };
 
+  const [hoverClass, setHoverClass] = useState("noShow");
+
+  function handleMouseOver() {
+    setHoverClass("hoverClass");
+  }
+
+  function handleMouseLeave() {
+    setHoverClass("noShow");
+  }
+
   return (
     <div className="container">
       <div className="messageBoxDiv">
@@ -125,9 +135,143 @@ function App() {
                   We're Hiring
                 </NavLink>
               </li>
-              <li>More</li>
+              <li
+                onMouseOver={handleMouseOver}
+                onMouseLeave={handleMouseLeave}
+                className="moreNav"
+              >
+                More
+              </li>
             </ul>
           </nav>
+          <div
+            onMouseOver={handleMouseOver}
+            onMouseLeave={handleMouseLeave}
+            className={`extraNavs + ${hoverClass}`}
+          >
+            <ul>
+              <li>
+                <NavLink
+                  to="/blog"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Blog
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/certification"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Certification
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/alumni"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Alumni Team
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/forum"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Forum
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/hackathon"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Hackathon
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/membership"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Membership Registration
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/campus"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Campus Ambassador Program
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/mentorship"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Mentorship
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/social"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Social Media
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/testimonials"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Testimonials
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/contact"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Contact Us
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/complaints"
+                  exact
+                  activeClassName="link"
+                  className="inactiveLink"
+                >
+                  Complaints
+                </NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </header>
       <Switch>
