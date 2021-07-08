@@ -3,6 +3,7 @@ import "./Reset.css";
 import "./App.css";
 import Online from "./Online.jsx";
 import Hiring from "./Hiring.jsx";
+import Blog from "./Blog.jsx";
 import { Route, NavLink, Switch } from "react-router-dom";
 
 function App() {
@@ -278,6 +279,7 @@ function App() {
         <Route exact path="/" component={Home} />
         <Route exact path="/online" component={Online} />
         <Route exact path="/hiring" component={Hiring} />
+        <Route exact path="/blog" component={Blog} />
       </Switch>
       <footer>
         <div className="mainFooterWrap">

@@ -1,0 +1,112 @@
+.blogWrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.blogWrapper > div:first-child {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blogContent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+.blogContent > div {
+    border: 4px solid rgb(166,166,166);
+    display: flex;
+    flex-direction: column;
+    height: 540px;
+}
+
+.blogContent .menu {
+    margin: 0 auto; 
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Questrial', sans-serif;
+} 
+
+.blogContent .menuOne {
+    display: flex;
+    align-items: center;
+}
+
+.blogContent .icon {
+    background-color: rgb(38,136,209);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Questrial', sans-serif;
+    margin-right: 7px;
+}
+
+.blogContent .title {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+} 
+
+.title > span {
+    display: flex;
+    align-items: center;
+}
+
+.blogContent h3 {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 80%;
+    font-family: "Noticia Text", serif;
+
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.blogContent .contFooter {
+    border-top: 1px solid rgb(204,204,204);
+    padding: 15px 0;
+    display: flex;
+    margin: 0 auto;
+    margin-top: auto;
+    width: 80%;
+}
+
+.eyeIcon, .chatIcon, .heartIcon {
+    display: flex;
+    align-items: center;
+}
+
+.chatIcon {
+    margin-left: 15px;
+}
+
+.heartIcon {
+    margin: 0;
+    margin-left: auto;
+}
+
+.backAndForwardButtonsDiv {
+    width: 350px;
+    margin: 30px auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+.pageNo span {
+    margin: 0 15px;
+}
+
+.head {
+    margin: 50px 0;
+}
