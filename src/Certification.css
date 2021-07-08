@@ -1,0 +1,102 @@
+:root {
+    --paraTextSize: 25px;
+    --paraTextFont: 'Questrial', sans-serif;
+}
+
+.certificationMain {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.certificationMain > img {
+    position: absolute;
+    opacity: 0.3;
+    z-index: -22;
+    width: 100%;
+}
+
+.certHeading {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: 'Noticia Text', sans-serif;
+    font-size: 56px;
+    color: rgb(81,41,110);
+}
+
+.certContent {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.certContent > p {
+    font-size: var(--paraTextSize);
+    font-family: var(--paraTextFont);
+    margin-bottom: 40px;
+    letter-spacing: 3.2px;
+    line-height: 1.5;
+}
+
+.form-heading {
+    margin: 0 auto;
+    font-size: 20px;
+    font-family: var(--paraTextFont);
+    margin-bottom: 20px;
+}
+
+.certificationMain form {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    width: 1000px;
+    justify-content: space-around;
+}
+
+.certificationMain select {
+    border: none;
+    box-shadow: none;
+    padding-left: 20px;
+}
+
+.certificationMain option {
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.certificationMain input {
+    outline: 1px solid rgb(55,59,77,0);
+    box-shadow: none;
+    color: black;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.grayPlaceholder::placeholder {
+    color: black;
+    padding-left: 20px;
+}
+
+select:hover, .grayPlaceholder:hover {
+    background-color: rgb(245,216,121);
+}
+
+.certificationMain button {
+    font-size: 20px;
+    font-family: var(--paraTextFont);
+    margin: 0 auto;
+    width: 170px;
+    height: 50px;
+    background-color: rgb(226,34,34);
+    border: none;
+    cursor: pointer;
+}
+
+.qrCode {
+    margin: 30px auto;
+}
